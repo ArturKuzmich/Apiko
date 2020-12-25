@@ -1,15 +1,15 @@
 <template>
   <div>
-    register
+    favorite
   </div>
 </template>
 
 <script>
 export default {
-name: "Register"
+  name: "Favorite"
 }
 </script>
 
-<style scoped >
+<style scoped>
 
 </style>
