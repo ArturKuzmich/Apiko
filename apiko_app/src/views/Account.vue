@@ -19,7 +19,7 @@
               SELL
             </button>
              <span class="top_bar_link">
-            <router-link to="/">
+            <router-link to="/account/register">
               REGISTER
             </router-link>
           </span>
