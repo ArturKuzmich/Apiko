@@ -46,7 +46,7 @@
 
     </div>
     <div>
-      <ItemsList :data="getDataFromApi" />
+      <ItemsList :data="getData" />
     </div>
   </div>
 </template>
@@ -63,8 +63,17 @@ export default {
     Search,
     HelloWorld
   },
+  data(){
+    return{
+      result: []
+    }
+  },
   mounted() {
+    this.result =
     this.getDataFromApi()
+  },
+  computed: {
+    ...mapGetters(['getData'])
   },
   methods: {
     ...mapActions(['getDataFromApi'])

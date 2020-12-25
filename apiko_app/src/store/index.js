@@ -33,7 +33,9 @@ export default new Vuex.Store({
   }
   },
   getters: {
-
+    getData(state){
+      return state.photoList
+    }
   },
   modules: {
   }
