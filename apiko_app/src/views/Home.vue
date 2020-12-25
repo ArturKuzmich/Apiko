@@ -43,6 +43,10 @@
         </div>
       </div>
       <search></search>
+
+    </div>
+    <div>
+      <ItemsList :data="getDataFromApi" />
     </div>
   </div>
 </template>
@@ -50,12 +54,20 @@
 <script>
 import HelloWorld from '@/components/HelloWorld.vue'
 import Search from "@/components/Search";
-
+import ItemsList from "@/components/List";
+import {mapActions, mapGetters} from "vuex";
 export default {
   name: 'Home',
   components: {
+    ItemsList,
     Search,
     HelloWorld
+  },
+  mounted() {
+    this.getDataFromApi()
+  },
+  methods: {
+    ...mapActions(['getDataFromApi'])
   }
 }
 </script>
