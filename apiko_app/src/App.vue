@@ -14,6 +14,7 @@ body {
   align-items: center;
   justify-content: center;
   background: #F8F8F8;
+  margin: 0;
 }
 #app {
   width: 100%;
@@ -21,18 +22,8 @@ body {
   text-align: center;
   color: #2c3e50;
   max-width: 1440px;
-  padding: 18px 160px 0 149px;
 }
+@media only screen and (max-width: 425px){
 
-
-
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
 }
 </style>

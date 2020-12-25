@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div >
       <div class="account_top-bar">
         <div class="top_bar-navigation">
           <div class="top_bar-logo">
@@ -19,8 +19,8 @@
               SELL
             </button>
              <span class="top_bar_link">
-            <router-link to="/account/register">
-              REGISTER
+            <router-link to="/account/login">
+              login
             </router-link>
           </span>
             <span class="top_bar_favorite">
@@ -41,15 +41,14 @@
 
 <script>
 export default {
-name: "Account"
+name: "Account",
 }
 </script>
 
 <style scoped>
   .account_top-bar{
-
+    padding: 18px 160px 0 149px;
   }
-
   .top_bar-navigation{
     display: flex;
     align-items: center;

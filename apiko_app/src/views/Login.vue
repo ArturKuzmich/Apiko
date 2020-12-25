@@ -1,5 +1,5 @@
 <template>
-  <div class="apiko_login">
+  <div class="apiko_form">
    <form class="login_form" @submit.prevent="login">
      <h2 class="title_form">Login</h2>
      <input_group
@@ -19,20 +19,21 @@
      >
      </input_group>
      <h2 class="apiko_remember">Don’t remember password?</h2>
-     <button  class="sumbit_btn" type="submit">Continue</button>
+     <btn_group :type="'submit'" :text="'Continue'"></btn_group>
    </form>
     <div class="push_to-register">
       <span>I have no account,</span>
-      <router-link to="/register">REGISTER NOW</router-link>
+      <router-link to="/account/register">REGISTER NOW</router-link>
     </div>
  </div>
 </template>
 
 <script>
 import Input_group from "@/components/input_group";
+import Btn_group from "@/components/btn_group";
 export default {
 name: "Log_In",
-  components: {Input_group},
+  components: {Btn_group, Input_group},
   data(){
     return{
       email: '',
@@ -55,8 +56,8 @@ name: "Log_In",
 }
 </script>
 
-<style scoped >
-  .apiko_login{
+<style  >
+  .apiko_form{
     min-width: 425px;
   }
   .login_form{
@@ -71,7 +72,6 @@ name: "Log_In",
     font-size: 22px;
     line-height: 25px;
     margin: 0 0 32px 0;
-
     color: #282828;
   }
   .login_item{
