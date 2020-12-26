@@ -4,13 +4,14 @@ import axios from "axios";
 
 const LOADING = 'LOADING';
 const SET_PHOTO = 'SET_PHOTO';
+const SEARCH_VALUE = 'SEARCH_VALUE'
 
 Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     photoList: [],
     loading: false,
-
+    searchName: ''
   },
   mutations: {
     [LOADING]: (state, loading ) => state.loading = loading,

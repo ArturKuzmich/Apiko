@@ -45,9 +45,7 @@
       <search></search>
 
     </div>
-    <div>
       <ItemsList :data="getData" />
-    </div>
   </div>
 </template>
 
