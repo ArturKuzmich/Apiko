@@ -18,6 +18,8 @@
 </template>
 
 <script>
+import {mapGetters} from "vuex";
+
 export default {
   name: "ItemsList",
   props: {
@@ -29,6 +31,27 @@ export default {
   },
   mounted() {
 
+  },
+  methods: {
+    sortItemsByName(value){
+      if(value){
+        this.data = this.data.filter(function (item)  {
+          return item.name.toLowerCase().includes(value.toLowerCase())
+        })
+      }else {
+        this.data = this.data
+      }
+
+    }
+  },
+  computed: {
+    ...mapGetters(['SEARCH_VALUE']),
+
+  },
+  watch: {
+    SEARCH_VALUE(){
+      this.sortItemsByName(this.SEARCH_VALUE)
+    }
   }
 }
 </script>
