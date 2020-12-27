@@ -95,4 +95,26 @@ name: "Account",
     align-items: center;
     justify-content: center;
   }
+  @media only screen and (max-width: 768px){
+    .account_top-bar{
+      padding: 18px 60px 14px 60px;
+    }
+    .account_view{
+      margin: 40px 0 0 0;
+    }
+  }
+  @media only screen and (max-width: 425px){
+    .account_top-bar{
+      padding: 18px 15px 14px 15px;
+    }
+    .account_view{
+      margin: 30px 0 0 0;
+    }
+
+  }
+  @media only screen and (max-width: 375px){
+  .top_bar-logo a svg{
+    width: 80px;
+  }
+  }
 </style>

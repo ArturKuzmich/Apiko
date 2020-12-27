@@ -115,4 +115,20 @@ name: "Register",
     margin-left: 5px;
     text-decoration: none;
   }
+  @media only screen and (max-width: 425px){
+    .apiko_form{
+      max-width: 365px;
+      min-width: 365px;
+    }
+    .push_to-login{
+      padding: 20px 50px;
+    }
+  }
+  @media only screen and (max-width: 375px){
+    .apiko_form{
+      max-width: 340px;
+      min-width: 340px;
+    }
+
+  }
 </style>

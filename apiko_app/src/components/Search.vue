@@ -33,7 +33,23 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['SEARCH_VALUE'])
+    ...mapGetters(['SEARCH_VALUE', ]),
+    // keywords: {
+    //   get() {
+    //     return this.$store.state.photoList.keywords;
+    //   },
+    //   set(val) {
+    //     this.$store.commit("setKeywords", val);
+    //   }
+    // },
+    // findNames: {
+    //   set(val) {
+    //     this.$store.commit("setNames", val);
+    //   },
+    //   get() {
+    //     return this.$store.state.photoList.name;
+    //   }
+    // }
   },
   methods: {
     ...mapActions(['getSearchName']),
@@ -105,5 +121,55 @@ export default {
   padding: 10px 58px;
   border: none;
   outline: none;
+}
+@media only screen and (max-width: 768px){
+  .search-item{
+    height: 42px;
+  }
+  .submit{
+    padding: 6px 50px;
+  }
+}
+@media only screen and (max-width: 425px){
+  .search-item{
+    height: 38px;
+  }
+  .search_name{
+    padding-left: 8px;
+  }
+  .search_svg{
+    margin: 0 10px 0 0;
+  }
+  .location_svg{
+    margin: 0 10px 0 0;
+  }
+  .input_group{
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .submit{
+    padding: 0 15px;
+    height: 38px;
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+@media only screen and (max-width: 375px){
+    .search_form{
+      flex-wrap: wrap;
+    }
+  .submit{
+    margin: 10px 0 0 0 ;
+    padding: 0 30px;
+  }
+  .search_location{
+    width: 25%;
+  }
+  .search_name{
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 320px){
+
 }
 </style>
